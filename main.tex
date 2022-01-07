@@ -27,6 +27,11 @@
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
 }
+\usepackage{libertine}
+\usepackage{libertinust1math}
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}
+
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{multirow}
@@ -65,9 +70,10 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Data Diri %%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\student}{\textbf{Isi Nama Di Sini (Dan Nim Di Sini)}}
+\newcommand{\stuid}{isi dengan NIM juga}
+\newcommand{\student}{\textbf{Isi Nama Di Sini (\stuid{})}}
 \newcommand{\course}{\textbf{Nama Mata Kuliah (Kode Mata Kuliah)}}
-\newcommand{\assignment}{\textbf{xxx}}
+\newcommand{\assignment}{\textbf{xxx}} % tugas ke...
 
 %%%%%%%%%%%%%%%%%%% using theorem style %%%%%%%%%%%%%%%%%%%%
 \newtheorem{thm}{Theorem}
@@ -80,10 +86,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{lipsum}%% a garbage package you don't need except to create examples.
 \usepackage{fancyhdr}
+\usepackage[ddmmyyyy]{datetime}
 \pagestyle{fancy}
 \lhead{Nama Mahasiswa di Header (Nim Mahasiswa di Header)}
 \rhead{ \thepage}
-\cfoot{\textbf{Judul Tugas diketik di sini}}
+\cfoot{\textbf{Judul Tugas diketik di sini}} % ini untuk judul tugas
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
@@ -97,6 +104,7 @@
 \setlength\headheight{14pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+
 \begin{document}
 \thispagestyle{empty}
 \begin{center}
@@ -104,12 +112,15 @@
 	\vspace{0.1cm}
 \end{center}
 \noindent
+% change font family for header section only
+%{\fontfamily{LinuxLibertineT-OsF}\large\selectfont 
+{\large
 \rule{17cm}{0.2cm}\\[0.3cm]
 Nama: \student \hfill Tugas Ke: \assignment\\[0.1cm]
-Mata Kuliah: \course \hfill Tanggal: Tanggalnya\\
+Mata Kuliah: \course \hfill Tanggal: \today\\
 \rule{17cm}{0.05cm}
 \vspace{0.1cm}
-
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BODY DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
